@@ -2,12 +2,16 @@ const body = document.querySelector("body");
 const homeButton = document.querySelector(".home-button");
 const hamburger = document.querySelector(".hamburger");
 const dropdown = document.querySelector(".dropdown");
+dropdown.style.display = "none";
 
+function dropdownDisplayer() {
+    dropdown.style.display === "none" ? dropdown.style.display = "flex" : dropdown.style.display = "none";
+}
 
-let smallScreen = false;
+hamburger.onclick = dropdownDisplayer;
+dropdown.onclick = function () { dropdown.style.display = "none" };
+homeButton.onclick = dropdownDisplayer;
 
-hamburger.onclick = function () { dropdown.style.display === "none" ? dropdown.style.display = "flex" : dropdown.style.display = "none"; }
-dropdown.onclick = function () {dropdown.style.display = "none"}
 
 window.onscroll = function (e) {
     const scrolled = ((window.scrollY / body.offsetHeight) * 100);
@@ -16,7 +20,7 @@ window.onscroll = function (e) {
 
     switch (Math.floor(scrolled)) {
         case 0:
-            homeButton.innerHTML = "Home";
+            homeButton.innerHTML = "<span class=\"current-section\">&nbsp;"
             break;
         case 20:
             homeButton.innerHTML = addImg + "Tai Chi<span>";
@@ -30,23 +34,5 @@ window.onscroll = function (e) {
         case 80:
             homeButton.innerHTML = addImg + "Contact<span>";
     }
-
-}
-
-window.onresize = function (e) {
-    const windowWidth = window.innerWidth;
-    console.log(windowWidth)
-    if (windowWidth < 960) smallScreen = true;
-    if (windowWidth > 960) smallScreen = false;
-
-    if (windowWidth < 800) {
-
-    }
-
-
-
-
-
-
 
 }

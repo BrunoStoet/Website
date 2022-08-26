@@ -16,7 +16,7 @@
 
 <body>
     <nav>
-        <a href="#header" class="home-button">Home</a>
+        <a href="#header" class="home-button"><span class="current-section">&nbsp;</a>
         <div class="hamburger">
             <div></div>
             <div></div>
@@ -36,6 +36,9 @@
         </ul>
         <div class="dropdown">
             <div>&nbsp;</div>
+            <a href="#header">
+                Home
+            </a>
             <a href="#tai-chi">
                 Tai Chi
             </a>
@@ -46,7 +49,6 @@
                 Rooster
             </a>
             <a href="#contact">Contact</a>
-
         </div>
     </nav>
     <section class="header" id="header">
@@ -71,6 +73,7 @@
                 geest door bewegende en staande meditatie. Dit vergroot je gezondheid, veerkracht en plezier!
                 Er is ook sensing hands, om te leren vanuit je innerlijke kracht te sparren met een partner.
                 Voor alle leeftijden.</p>
+            
         </div>
         <img class="tai-chi-man-img" src="./Media/man-doing-tai-chi-pose.png" alt="man doing tai chi pose">
         <div class="half-grey-bg"></div>
@@ -104,17 +107,12 @@
     </section>
     <section class="rooster" id="rooster">
         <div class="rooster-container">
-            <div class="times">
-                <div class="time">18:45-19:45</div>
-                <div class="time">19:45-20:15</div>
-                <div class="time">20:30-21:30</div>
-                <div class="time">21:30-22:00</div>
-            </div>
             <div class="events">
-                <div class="event">Beginners</div>
-                <div class="event">Half Gevorderden</div>
-                <div class="event">Gevorderden</div>
-                <div class="event">Push Hands</div>
+                <div class="event">Beginners 18:45-19:45
+                </div>
+                <div class="event">Half&nbsp;Gevorderden 19:45-20:15</div>
+                <div class="event">Gevorderden 20:30-21:30</div>
+                <div class="event">Push Hands 21:30-22:00</div>
             </div>
 
 
@@ -125,40 +123,49 @@
 
         <div class="form-container">
             <form action="https://formspree.io/f/mlevdlnv" method="POST" class="form">
-                <div>
+                <div class="form-field">
                     <label for="name">Naam</label>
                     <input class="kleinebox" type="text" name="name" required>
-                    <br>
 
                 </div>
-                <div>
+                <div class="form-field">
                     <label for="email">Email</label>
                     <input class="kleinebox" type="email" name="email" required>
-                    <br>
                 </div>
-                <div>
+                <div class="form-field">
                     <label for="bericht">Bericht (optioneel)</label>
                     <textarea id="bericht" class="grotebox" name="bericht"></textarea>
                     <br>
                     <input type="submit" value="verstuur" class="verstuur">
                 </div>
             </form>
-            <img src="./Media/Logo.png" alt="abstract man doing tai chi pose">
+            <img src="./Media/Logo.png" alt="silhouette of a man doing tai chi pose">
         </div>
 
         <footer>
-                <div class="subtext">
-                    <p class="bold">Laan&nbsp;van&nbsp;Meerdervoord 190</p>
-                    <p>2517&nbsp;AT Den Haag</p>
-                </div>
-                <div class="subtext">
-                    <p class="bold">Mark&nbsp;Stoet</p>
-                    <p>06&nbsp;25035816</p>
-                </div>
-                <div class="subtext">
-                    <p class="bold">Mirjam&nbsp;van&nbsp;Duyser</p>
-                    <p>06&nbsp;39078939</p>
-                </div>
+            <div class="subtext-container">
+                <a href="https://goo.gl/maps/1Pm2YwqCvq29JveP7" target="_blank">
+                    <div class="subtext">
+                        <p class="bold">Laan&nbsp;van&nbsp;Meerdervoord 190</p>
+                        <p>2517&nbsp;AT Den Haag</p>
+                    </div>
+                </a>
+                <a href="tel:0625035816">
+                    <div class="subtext">
+                        <p class="bold">Mark&nbsp;Stoet</p>
+                        <p>06&nbsp;25035816</p>
+                    </div>
+                </a>
+                <a href="tel:0639078939">
+                    <div class="subtext">
+                        <p class="bold">Mirjam&nbsp;van&nbsp;Duyser</p>
+                        <p>06&nbsp;39078939</p>
+                    </div>
+                </a>
+            </div>
+            <div class="privacy-policy">
+                <a href="https://www.pornhub.com" targer="_blank"><p>Privacy Verklaring</p></a>
+            </div>
         </footer>
         <div class="footer-bg"></div>
     </section>
