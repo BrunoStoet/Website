@@ -2,6 +2,7 @@ const body = document.querySelector("body");
 const homeButton = document.querySelector(".home-button");
 const hamburger = document.querySelector(".hamburger");
 const dropdown = document.querySelector(".dropdown");
+const contactButton = document.querySelector(".contact-button");
 dropdown.style.display = "none";
 
 function dropdownDisplayer() {
@@ -21,18 +22,28 @@ window.onscroll = function (e) {
     switch (Math.floor(scrolled)) {
         case 0:
             homeButton.innerHTML = "<span class=\"current-section\">&nbsp;"
+            contactButton.style.backgroundColor = "rgba(0, 0, 0, 0)"
+            contactButton.style.color = "#000"
             break;
         case 20:
             homeButton.innerHTML = addImg + "Tai Chi<span>";
+            contactButton.style.backgroundColor = "var(--tai-chi-blue)"
+            contactButton.style.color = "#fff"
             break;
         case 40:
             homeButton.innerHTML = addImg + "Docenten<span>";
+            contactButton.style.backgroundColor = "var(--tai-chi-blue)"
+            contactButton.style.color = "#fff"
             break;
         case 60:
             homeButton.innerHTML = addImg + "Rooster<span>";
+            contactButton.style.backgroundColor = "var(--tai-chi-blue)"
+            contactButton.style.color = "#fff"
             break;
         case 80:
             homeButton.innerHTML = addImg + "Contact<span>";
+            contactButton.style.backgroundColor = "rgba(0, 0, 0, 0)"
+            contactButton.style.color = "#000"
     }
 
 }
