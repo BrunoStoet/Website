@@ -3,7 +3,11 @@ const homeButton = document.querySelector(".home-button");
 const hamburger = document.querySelector(".hamburger");
 const dropdown = document.querySelector(".dropdown");
 const contactButton = document.querySelector(".contact-button");
+const taiChiPdfViewer = document.querySelector(".tai-chi-pdf-viewer");
+const readMoreButton = document.querySelector(".read-more");
+taiChiPdfViewer.style.display = "none";
 dropdown.style.display = "none";
+
 
 function dropdownDisplayer() {
     dropdown.style.display === "none" ? dropdown.style.display = "flex" : dropdown.style.display = "none";
@@ -12,7 +16,8 @@ function dropdownDisplayer() {
 hamburger.onclick = dropdownDisplayer;
 dropdown.onclick = function () { dropdown.style.display = "none" };
 homeButton.onclick = dropdownDisplayer;
-
+readMoreButton.onclick = function () { taiChiPdfViewer.style.display = "flex" }
+taiChiPdfViewer.onclick = function () { taiChiPdfViewer.style.display = "none" }
 
 window.onscroll = function (e) {
     const scrolled = ((window.scrollY / body.offsetHeight) * 100);
