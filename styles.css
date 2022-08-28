@@ -99,7 +99,7 @@ nav {
 
 @media only screen and (max-width: 500px) {
     nav {
-        padding: 0;
+        padding: 5px;
     }
 
     .current-section {
