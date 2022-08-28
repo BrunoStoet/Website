@@ -13,8 +13,8 @@ dropdown.style.display = "none";
 
 
 function dropdownDisplayer() {
-    img[4].style.display === "none" ? img[4].style.display = "flex" : img[4].style.display = "none";
-    img[0].style.display === "none" ? img[0].style.display = "flex" : img[0].style.display = "none";
+    img[4].style.display === "none" ? img[4].style.animation = "hue-rotate 5.5s ease-in-out infinite" : img[4].style.animation = "none";
+    img[0].style.display === "none" ? img[0].style.animation = "hue-rotate 5.5s ease-in-out infinite" : img[0].style.animation = "none";
     dropdown.style.display === "none" ? dropdown.style.display = "flex" : dropdown.style.display = "none";
 }
 
