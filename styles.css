@@ -15,7 +15,7 @@
 
 html {
     font-family: 'Poppins', sans-serif;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
 }
 
 @media only screen and (max-height: 750px) {
@@ -89,7 +89,7 @@ nav {
 
 @media only screen and (max-height: 900px) {
     nav {
-        padding: 0;
+        padding: 10px;
     }
 
     .current-section {
@@ -106,9 +106,6 @@ nav {
         font-size: 2em;
     }
 }
-
-
-
 
 li,
 a,
@@ -148,8 +145,6 @@ li,
     height: 60px;
     margin-right: 20px;
 }
-
-
 
 /* hamburger menu */
 
@@ -193,8 +188,6 @@ li,
     text-align: center;
 }
 
-
-
 @media only screen and (max-width: 800px) {
     .hamburger {
         display: inherit;
@@ -224,7 +217,6 @@ li,
         gap: 0;
     }
 }
-
 
 /* header */
 
@@ -278,19 +270,6 @@ li,
     animation: hue-rotate 5.5s ease-in-out infinite;
 }
 
-@keyframes hue-rotate {
-    0% {
-        filter: hue-rotate(200deg);
-    }
-
-    50% {
-        filter: hue-rotate(400deg);
-    }
-
-    100% {
-        filter: hue-rotate(200deg);
-    }
-}
 
 .hero-text>img:hover {
     filter: hue-rotate(200deg);
@@ -542,6 +521,7 @@ li,
 .form-container>img {
     width: 400px;
     height: 300px;
+    animation: hue-rotate 5.5s ease-in-out infinite;
 }
 
 @media only screen and (max-width: 950px) {
@@ -649,15 +629,21 @@ a>p:hover,
 
 
 .verstuur {
-    background: #0066FF;
+    background: var(--tai-chi-blue);
     border-radius: 37px;
     color: white;
     width: 125px;
     height: 53px;
     border: 0px;
     cursor: pointer;
+    border: 1px var(--tai-chi-blue) solid;
     font-size: 1.3em;
 
+}
+
+.verstuur:hover {
+    background-color: #fff;
+    color: #000;
 }
 
 .kleinebox {
@@ -687,5 +673,19 @@ a>p:hover,
     .kleinebox,
     .grotebox {
         width: 70vw;
+    }
+}
+
+@keyframes hue-rotate {
+    0% {
+        filter: hue-rotate(200deg);
+    }
+
+    50% {
+        filter: hue-rotate(400deg);
+    }
+
+    100% {
+        filter: hue-rotate(200deg);
     }
 }

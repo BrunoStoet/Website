@@ -5,16 +5,22 @@ const dropdown = document.querySelector(".dropdown");
 const contactButton = document.querySelector(".contact-button");
 const taiChiPdfViewer = document.querySelector(".tai-chi-pdf-viewer");
 const readMoreButton = document.querySelector(".read-more");
+const section = document.getElementsByTagName("section");
+const img = document.getElementsByTagName("img");
+console.log(img)
 taiChiPdfViewer.style.display = "none";
 dropdown.style.display = "none";
 
 
 function dropdownDisplayer() {
+    img[4].style.display === "none" ? img[4].style.display = "flex" : img[4].style.display = "none";
+    img[0].style.display === "none" ? img[0].style.display = "flex" : img[0].style.display = "none";
     dropdown.style.display === "none" ? dropdown.style.display = "flex" : dropdown.style.display = "none";
 }
 
+
 hamburger.onclick = dropdownDisplayer;
-dropdown.onclick = function () { dropdown.style.display = "none" };
+dropdown.onclick = function () { dropdownDisplayer() };
 homeButton.onclick = dropdownDisplayer;
 readMoreButton.onclick = function () { taiChiPdfViewer.style.display = "flex" }
 taiChiPdfViewer.onclick = function () { taiChiPdfViewer.style.display = "none" }
