@@ -266,15 +266,11 @@ li,
     font-size: 1.5em;
 }
 
-.hero-text>img {
+.hue-shift {
     animation: hue-rotate 5.5s ease-in-out infinite;
 }
 
 
-.hero-text>img:hover {
-    filter: hue-rotate(200deg);
-
-}
 
 /* tai-chi */
 
@@ -521,7 +517,6 @@ li,
 .form-container>img {
     width: 400px;
     height: 300px;
-    animation: hue-rotate 5.5s ease-in-out infinite;
 }
 
 @media only screen and (max-width: 950px) {
