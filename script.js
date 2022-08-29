@@ -6,15 +6,14 @@ const contactButton = document.querySelector(".contact-button");
 const taiChiPdfViewer = document.querySelector(".tai-chi-pdf-viewer");
 const readMoreButton = document.querySelector(".read-more");
 const section = document.getElementsByTagName("section");
-const img = document.getElementsByTagName("img");
+const img = document.querySelectorAll(".state-changer")
 taiChiPdfViewer.style.display = "none";
 dropdown.style.display = "none";
 
-console.log(img[4].className)
-console.log(img[0].style)
 function dropdownDisplayer() {
+
     img[0].className === "hue-shift" ? img[0].className = "" : img[0].className = "hue-shift";
-    img[4].className === "hue-shift" ? img[4].className = "" : img[4].className = "hue-shift";
+    img[1].className === "hue-shift" ? img[1].className = "" : img[1].className = "hue-shift";
     dropdown.style.display === "none" ? dropdown.style.display = "flex" : dropdown.style.display = "none";
 }
 
