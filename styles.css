@@ -78,7 +78,6 @@ nav {
     align-items: center;
     padding: 20px 0px;
     top: 0;
-    backdrop-filter: blur(8px);
 }
 
 .current-section {
@@ -98,6 +97,9 @@ nav {
 }
 
 @media only screen and (max-width: 500px) {
+    .chinese-text {
+        display: none;
+    }
     nav {
         padding: 5px;
     }
@@ -291,12 +293,36 @@ li,
     cursor: pointer;
 }
 
+.read-more-mobile {
+    cursor: pointer;
+    text-decoration: underline;
+    display: none;
+}
+
+
+.read-more-mobile::after {
+    content: url(./Media/pdf-icon.svg.svg);
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+
 .read-more::after {
     content: url(./Media/pdf-icon.svg.svg);
     display: inline-block;
     width: 25px;
     height: 25px;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .read-more-mobile {
+        display: inline;
+    }
+    .read-more {
+        display: none;
+    }
 }
 
 .tai-chi-text {
@@ -317,6 +343,9 @@ li,
 }
 
 @media only screen and (max-width: 750px) {
+    html {
+        scroll-snap-type: none;
+    }
     .tai-chi>img {
         display: none;
     }
@@ -633,6 +662,7 @@ a>p:hover,
     cursor: pointer;
     border: 1px var(--tai-chi-blue) solid;
     font-size: 1.3em;
+    margin-top: 15px;
 
 }
 
