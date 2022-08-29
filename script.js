@@ -12,8 +12,8 @@ dropdown.style.display = "none";
 
 function dropdownDisplayer() {
 
-    img[0].className === "hue-shift" ? img[0].className = "" : img[0].className = "hue-shift";
-    img[1].className === "hue-shift" ? img[1].className = "" : img[1].className = "hue-shift";
+    img[0].className === "hue-shift state-changer" ? img[0].className = "state-changer" : img[0].className = "hue-shift state-changer";
+    img[1].className === "hue-shift state-changer" ? img[1].className = "state-changer" : img[1].className = "hue-shift state-changer";
     dropdown.style.display === "none" ? dropdown.style.display = "flex" : dropdown.style.display = "none";
 }
 
