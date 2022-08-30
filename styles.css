@@ -3,7 +3,7 @@
     --section-height: 100vh;
     --tai-chi-blue: #0066ff;
     --tai-chi-blue-secondary: #003DCB;
-    --minimum-height: 900px;
+    --minimum-height: 600px;
 }
 
 
@@ -17,6 +17,10 @@ html {
     font-family: 'Poppins', sans-serif;
     scroll-snap-type: y mandatory;
     scroll-behavior: smooth;
+}
+
+img {
+    user-select: none;
 }
 
 
@@ -139,6 +143,7 @@ li,
 }
 
 .home-button>img {
+    user-select: none;
     width: 60px;
     height: 60px;
     margin-right: 20px;
@@ -579,6 +584,7 @@ footer {
     justify-content: space-around;
     width: 100%;
     left: 0;
+    z-index: -1;
 }
 
 .contact > .filler {
