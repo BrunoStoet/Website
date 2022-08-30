@@ -16,12 +16,7 @@
 html {
     font-family: 'Poppins', sans-serif;
     scroll-snap-type: y mandatory;
-}
-
-@media only screen and (max-height: 750px) {
-    html {
-        scroll-snap-type: none;
-    }
+    scroll-behavior: smooth;
 }
 
 
@@ -138,6 +133,7 @@ li,
 }
 
 .home-button {
+    cursor: pointer;
     display: flex;
     align-items: center;
 }
@@ -573,11 +569,21 @@ form {
 }
 
 footer {
+    background-color: #000000;
+    justify-self: flex-end;    
+    position:absolute;
     height: 250px;
     min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    width: 100%;
+    left: 0;
+}
+
+.contact > .filler {
+    height: 270px;
+   
 }
 
 
@@ -596,16 +602,6 @@ footer {
 .b-bold {
     font-weight: bold;
     color: #000;
-}
-
-.footer-bg {
-    min-height: 250px;
-    height: 20vh;
-    width: 100%;
-    background-color: #000;
-    position: absolute;
-    left: 0;
-    z-index: -1;
 }
 
 .subtext {
@@ -691,6 +687,11 @@ a>p:hover,
     max-width: 550px;
     font-size: 1.3em;
     width: 44vw;
+    resize: none;
+}
+
+label {
+    margin-top: 5px;
 }
 
 @media only screen and (max-width: 700px) {
