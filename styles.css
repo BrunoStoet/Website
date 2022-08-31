@@ -397,7 +397,7 @@ li,
     justify-content: center;
     gap: 50px;
     overflow-x: hidden;
-
+    min-height: var(--minimum-height);
 }
 
 .mw-stoet,
@@ -740,6 +740,9 @@ label {
     }
     html {
         scroll-snap-type: none;
+    }
+    .half-grey-bg {
+        background-image: linear-gradient(#fff 0 50%, #fff 50% 100%);
     }
 }
 
