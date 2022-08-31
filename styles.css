@@ -3,7 +3,7 @@
     --section-height: 100vh;
     --tai-chi-blue: #0066ff;
     --tai-chi-blue-secondary: #003DCB;
-    --minimum-height: 600px;
+    --minimum-height: 700px;
 }
 
 
@@ -30,6 +30,7 @@ body {
     flex-direction: column;
     align-items: center;
     overflow-y: scroll;
+    min-width: 250px;
 }
 
 .half-grey-bg {
@@ -183,6 +184,7 @@ li,
     font-size: 40px;
     gap: 5vh;
     overflow: scroll;
+    overflow-x: hidden;
 }
 
 .dropdown>a {
@@ -225,6 +227,9 @@ li,
 }
 
 @media only screen and (max-height: 700px) {
+    .header-bg {
+        background-color: #fff;
+    }
     html {
         scroll-snap-type: none;
     }
@@ -242,7 +247,7 @@ li,
     flex-direction: column;
     justify-content: center;
     min-height: var(--minimum-height);
-
+    overflow-x: hidden;
 }
 
 
@@ -294,6 +299,7 @@ li,
     justify-content: space-between;
     align-items: center;
     min-height: var(--minimum-height);
+    overflow-x: hidden;
 
 }
 
@@ -390,12 +396,19 @@ li,
     flex-direction: column;
     justify-content: center;
     gap: 50px;
+    overflow-x: hidden;
+
 }
 
 .mw-stoet,
 .m-duyser {
     display: flex;
 
+}
+
+.mw-stoet > p,
+.m-duyser > p{
+    
 }
 
 .mw-stoet>img,
@@ -445,6 +458,8 @@ li,
     justify-content: center;
     min-height: var(--minimum-height);
     flex-direction: column;
+    overflow-x: hidden;
+
 }
 
 .middle {
@@ -545,6 +560,7 @@ li,
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
+    overflow-x: hidden;
 }
 
 .form-container {
@@ -590,7 +606,6 @@ footer {
     flex-direction: column;
     justify-content: space-around;
     width: 100%;
-    z-index: -1;
 }
 
 .contact > .filler {
@@ -716,6 +731,15 @@ label {
     .kleinebox,
     .grotebox {
         width: 70vw;
+    }
+}
+
+@media only screen and (max-height: 700px) {
+    .header-bg {
+        background-color: #fff;
+    }
+    html {
+        scroll-snap-type: none;
     }
 }
 
