@@ -269,13 +269,24 @@ li,
 
 
 .header-bg {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-image: url("./Media/golf-mam.png");
     background-color: #f4f4f5;
     width: 100%;
     height: 100%;
+    
+    background-position: bottom;
     position: absolute;
     left: 0;
     top: 0;
     z-index: -1;
+}
+
+@media only screen and (min-width: 1500px) {
+    .header-bg {
+    background-position-y: 600px;
+    }
 }
 
 .hero-text>p {
@@ -397,7 +408,7 @@ li,
     justify-content: center;
     gap: 50px;
     overflow-x: hidden;
-
+    min-height: var(--minimum-height);
 }
 
 .mw-stoet,
@@ -740,6 +751,9 @@ label {
     }
     html {
         scroll-snap-type: none;
+    }
+    .half-grey-bg {
+        background-image: linear-gradient(#fff 0 50%, #fff 50% 100%);
     }
 }
 
