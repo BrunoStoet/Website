@@ -1,4 +1,5 @@
 const body = document.querySelector("body");
+const footer = document.querySelector("footer");
 const homeButton = document.querySelector(".home-button");
 const hamburger = document.querySelector(".hamburger");
 const dropdown = document.querySelector(".dropdown");
@@ -10,7 +11,10 @@ const img = document.querySelectorAll(".state-changer")
 taiChiPdfViewer.style.display = "none";
 dropdown.style.display = "none";
 
+console.log(footer.style.zIndex)
+
 function dropdownDisplayer() {
+    footer.style.zIndex === "" ? footer.style.zIndex = "-1" : footer.style.zIndex = "";
 
     img[0].className === "hue-shift state-changer" ? img[0].className = "state-changer" : img[0].className = "hue-shift state-changer";
     img[1].className === "hue-shift state-changer" ? img[1].className = "state-changer" : img[1].className = "hue-shift state-changer";
