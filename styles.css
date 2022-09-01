@@ -413,10 +413,15 @@ li,
 
 .mw-stoet,
 .m-duyser {
-    max-width: 600px;
+    display: flex;
 
 }
 
+
+.mw-stoet>div,
+.m-duyser>div {
+    max-width: 600px;
+}
 .mw-stoet > p,
 .m-duyser > p{
     
