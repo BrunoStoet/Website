@@ -417,11 +417,6 @@ li,
 
 }
 
-
-.mw-stoet>div,
-.m-duyser>div {
-    max-width: 600px;
-}
 .mw-stoet > p,
 .m-duyser > p{
     
@@ -436,7 +431,7 @@ li,
 
 .mw-stoet>div,
 .m-duyser>div {
-    max-width: 300px;
+    max-width: 600px;
 }
 
 @media only screen and (max-width: 600px) {
