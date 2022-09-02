@@ -66,6 +66,11 @@ window.onscroll = function (e) {
             contactButton.style.backgroundColor = "var(--tai-chi-blue)"
             contactButton.style.color = "#fff"
             break;
+        case 79:
+            homeButton.innerHTML = addImg + "Contact<span>";
+            contactButton.style.backgroundColor = "rgba(0, 0, 0, 0)"
+            contactButton.style.color = "#000"
+            break;
         case 80:
             homeButton.innerHTML = addImg + "Contact<span>";
             contactButton.style.backgroundColor = "rgba(0, 0, 0, 0)"
