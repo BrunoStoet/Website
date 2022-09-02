@@ -4,6 +4,7 @@
     --tai-chi-blue: #0066ff;
     --tai-chi-blue-secondary: #003DCB;
     --minimum-height: 700px;
+    --maximum-width: 1000px;
 }
 
 
@@ -51,6 +52,12 @@ h1 {
     font-family: 'Aladin', cursive;
 }
 
+h2 {
+    font-family: "Abel", sans-serif;
+    font-weight: 100;
+    font-size: 3em;
+}
+
 h4 {
     font-size: 1.5em;
     margin-bottom: 20px;
@@ -58,6 +65,7 @@ h4 {
 
 p {
     color: #5F6368;
+    max-width: 500px;
 }
 
 @media only screen and (max-width: 400px) {
@@ -237,6 +245,7 @@ li,
 /* header */
 
 .header {
+    max-width: var(--maximum-width);
     scroll-snap-align: start;
     width: var(--section-width);
     height: var(--section-height);
@@ -302,6 +311,7 @@ li,
 /* tai-chi */
 
 .tai-chi {
+    max-width: var(--maximum-width);
     scroll-snap-align: start;
     width: var(--section-width);
     height: var(--section-height);
@@ -317,6 +327,7 @@ li,
     margin-top: 10px;
     text-decoration: underline;
     cursor: pointer;
+    color: #000;
 }
 
 .read-more-mobile {
@@ -399,6 +410,7 @@ li,
 /* docenten */
 
 .docenten {
+    max-width: var(--maximum-width);
     scroll-snap-align: start;
     width: var(--section-width);
     height: var(--section-height);
@@ -406,23 +418,20 @@ li,
     flex-direction: column;
     justify-content: center;
     gap: 50px;
+    overflow-y: visible;
     overflow-x: hidden;
     min-height: var(--minimum-height);
+    
 }
 
 .mw-stoet,
 .m-duyser {
     display: flex;
-
 }
 
-.mw-stoet > p,
-.m-duyser > p{
-    
-}
 
-.mw-stoet>img,
-.m-duyser>img {
+.mw-stoet-img,
+.m-duyser-img {
     margin-right: 30px;
     width: 160px;
     height: 170px;
@@ -433,10 +442,55 @@ li,
     max-width: 600px;
 }
 
+.expand-mark,
+.expand-mirjam {
+    cursor: pointer;
+    text-decoration: underline;
+    color: #000;
+}
+
+.docent-expand-container-mark,
+.docent-expand-container-mirjam {
+    position: absolute;
+    display: none;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    background-color: #5F636833;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.docent-mark-expand,
+.docent-mirjam-expand {
+    max-width: var(--maximum-width);
+    width: var(--section-width);
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    background-color: #fff;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.less-round-docent-img {
+    margin-left: 15px;
+    width: 160px;
+    height: 170px;
+}
+
+@media only screen and (max-width: 700px) {
+    .less-round-docent-img {
+        display: none;
+    }
+}
+
+
 @media only screen and (max-width: 800px) {
 
-    .mw-stoet>img,
-    .m-duyser>img {
+    .mw-stoet-img,
+    .m-duyser-img {
         margin-right: 30px;
         width: 60px;
         height: 60px;
@@ -450,16 +504,21 @@ li,
 }
 
 @media only screen and (max-width: 500px) {
-
     .mw-stoet>img,
     .m-duyser>img {
         display: none;
     }
+    .docent-mark-expand,
+    .docent-mirjam-expand {
+        width: 98%;
+    }
+
 }
 
 /* rooster */
 
 .rooster {
+    max-width: var(--maximum-width);
     scroll-snap-align: start;
     width: var(--section-width);
     height: var(--section-height);
@@ -510,6 +569,12 @@ li,
     padding: 10px 15px;
     margin: 10px;
     cursor: pointer;
+    border: 1px solid var(--tai-chi-blue);
+}
+
+.back-button:hover {
+    color: #000;
+    background-color: #ffffff00;
 }
 
 
@@ -562,6 +627,7 @@ li,
 /* contact */
 
 .contact {
+    max-width: var(--maximum-width);
     scroll-snap-align: start;
     width: var(--section-width);
     height: var(--section-height);
@@ -571,6 +637,35 @@ li,
     justify-content: flex-end;
     align-items: center;
     overflow-x: hidden;
+    gap: 70px;
+}
+
+@media only screen and (max-height: 950px) {
+    .contact {
+        gap: 10px;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    h2 {
+        font-size: 2.5em;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    h2 {
+        font-size: 1.5em;
+    }
+    .contact {
+        gap: 0;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+    h2 {
+        font-size: 1em;
+        font-family: "Roboto", "arial";
+    }
 }
 
 .form-container {
@@ -615,6 +710,7 @@ footer {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
+    align-items: center;
     width: 100%;
 }
 
@@ -628,6 +724,7 @@ footer {
     justify-content: space-between;
     align-content: center;
     align-items: center;
+    max-width: var(--maximum-width);
 }
 
 .bold {
@@ -687,15 +784,12 @@ a>p:hover,
     }
 }
 
-
-
-
 .verstuur {
     background: var(--tai-chi-blue);
     border-radius: 37px;
     color: white;
     width: 125px;
-    height: 53px;
+    height: 50px;
     border: 0px;
     cursor: pointer;
     border: 1px var(--tai-chi-blue) solid;
@@ -712,7 +806,7 @@ a>p:hover,
 .kleinebox {
     background: #D9D9D9;
     border-radius: 14px;
-    height: 53px;
+    height: 50px;
     width: 44vw;
     max-width: 550px;
     border: 0px;
@@ -724,7 +818,7 @@ a>p:hover,
     border: 0px;
     background: #D9D9D9;
     border-radius: 14px;
-    height: 134px;
+    height: 130px;
     padding: 10px;
     max-width: 550px;
     font-size: 1.3em;

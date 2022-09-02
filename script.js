@@ -7,7 +7,11 @@ const contactButton = document.querySelector(".contact-button");
 const taiChiPdfViewer = document.querySelector(".tai-chi-pdf-viewer");
 const readMoreButton = document.querySelector(".read-more");
 const section = document.getElementsByTagName("section");
-const img = document.querySelectorAll(".state-changer")
+const img = document.querySelectorAll(".state-changer");
+const expandMark = document.querySelector(".expand-mark");
+const expandMarkContainer = document.querySelector(".docent-expand-container-mark")
+const expandMirjam = document.querySelector(".expand-mirjam");
+const expandMirjamContainer = document.querySelector(".docent-expand-container-mirjam")
 taiChiPdfViewer.style.display = "none";
 dropdown.style.display = "none";
 
@@ -27,6 +31,14 @@ dropdown.onclick = function () { dropdownDisplayer() };
 homeButton.onclick = dropdownDisplayer;
 readMoreButton.onclick = function () { taiChiPdfViewer.style.display = "flex" }
 taiChiPdfViewer.onclick = function () { taiChiPdfViewer.style.display = "none" }
+
+//expand mark 
+expandMark.onclick = function () {expandMarkContainer.style.display = "flex"}
+expandMarkContainer.onclick = function () {expandMarkContainer.style.display = "none"}
+
+//expand mirjam
+expandMirjam.onclick = function () {expandMirjamContainer.style.display = "flex"}
+expandMirjamContainer.onclick = function () {expandMirjamContainer.style.display = "none"}
 
 window.onscroll = function (e) {
     const scrolled = ((window.scrollY / body.offsetHeight) * 100);
