@@ -136,11 +136,6 @@ li,
     font-family: 'Poppins', sans-serif;
     font-size: 16px;
     border-radius: 37px;
-}
-
-.contact-button:hover {
-    background-color: var(--tai-chi-blue);
-    color: #fff;
     cursor: pointer;
 }
 
@@ -283,7 +278,6 @@ li,
     background-color: #f4f4f5;
     width: 100%;
     height: 100%;
-    
     background-position: bottom;
     position: absolute;
     left: 0;
@@ -296,6 +290,13 @@ li,
     background-position-y: 600px;
     }
 }
+
+@media only screen and (max-width: 900px) {
+    .header-bg {
+        background-size: 1400px;
+    }
+}
+
 
 .hero-text>p {
     font-weight: 300;
@@ -570,11 +571,6 @@ li,
     margin: 10px;
     cursor: pointer;
     border: 1px solid var(--tai-chi-blue);
-}
-
-.back-button:hover {
-    color: #000;
-    background-color: #ffffff00;
 }
 
 
