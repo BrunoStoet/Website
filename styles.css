@@ -297,11 +297,12 @@ li,
     }
 }
 
-@media only screen and (max-height: 980px) {
+@media only screen and (max-width: 600px) {
     .header-bg {
         display: none;
     }
 }
+
 
 
 .hero-text>p {
