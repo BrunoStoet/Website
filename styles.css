@@ -43,6 +43,10 @@ body {
 
 }
 
+.border-bottom {
+    border-bottom: 1px solid black;
+}
+
 .blue-text {
     color: var(--tai-chi-blue);
 }
@@ -124,8 +128,7 @@ ul {
     color: black;
 }
 
-li,
-.contact-button {
+li {
     margin-left: 50px;
 }
 
@@ -195,7 +198,7 @@ li,
     text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     .hamburger {
         display: inherit;
     }
@@ -213,7 +216,7 @@ li,
     }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 850px) {
     ul {
         display: none;
     }
@@ -387,7 +390,7 @@ li,
     }
 }
 
-@media only screen and (max-width: 750px) {
+@media only screen and (max-width: 1000px) {
     html {
         scroll-snap-type: none;
     }
@@ -473,13 +476,15 @@ li,
 .docent-mark-expand,
 .docent-mirjam-expand {
     max-width: var(--maximum-width);
-    width: var(--section-width);
     display: flex;
     flex-direction: row;
     border-radius: 10px;
     background-color: #fff;
-    justify-content: space-between;
     padding: 20px;
+}
+
+.docent-expand-image-container {
+    
 }
 
 .less-round-docent-img {
@@ -522,6 +527,37 @@ li,
     }
 
 }
+
+/* verdieping */
+
+.verdieping {
+    max-width: var(--maximum-width);
+    scroll-snap-align: start;
+    width: var(--section-width);
+    height: var(--section-height);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    min-height: var(--minimum-height + 300);
+    flex-direction: row;
+    overflow-x: hidden;
+    gap: 10px;
+}
+
+.yt-embed {
+    width: 100%;
+    height: 40%;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 1000px) {
+    .verdieping {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
+
 
 /* rooster */
 
@@ -572,7 +608,6 @@ li,
     font-size: 2em;
     font-weight: 100;
     border-bottom: 1px #5F6368 solid;
-    z-index: 10;
 }
 
 .zevende-hemel-link {
@@ -601,6 +636,9 @@ li,
     border: 1px solid var(--tai-chi-blue);
 }
 
+.rooster-info {
+    border-bottom: solid 1px #5F6368;
+}
 
 .event {
     margin: 10px;
@@ -608,7 +646,18 @@ li,
     border-radius: 5px;
 }
 
-@media only screen and (max-width: 950px) {
+.pricing {
+    border: 1px solid #0DFFAD;
+    border-left:#0DFFAD 8px solid;
+}
+
+
+.price {
+    font-weight: 500;
+    color: black;
+}
+
+@media only screen and (max-width: 1100px) {
     .middle {
         flex-direction: column;
     }
@@ -621,11 +670,18 @@ li,
     .event {
         margin: 10px 0;
     }
+    .maps {
+        display: none;
+    }
+    .event > p {
+        display: inline;
+    }
 }
 
 .beginners {
-    background-color: #0DFFAD33;
-    border-left:#0DFFAD 8px solid;
+  
+    background-color: #11a68333;
+    border-left: #11a683 8px solid;
 }
 
 
