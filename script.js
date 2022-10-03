@@ -12,8 +12,10 @@ const expandMark = document.querySelector(".expand-mark");
 const expandMarkContainer = document.querySelector(".docent-expand-container-mark")
 const expandMirjam = document.querySelector(".expand-mirjam");
 const expandMirjamContainer = document.querySelector(".docent-expand-container-mirjam")
+const nav = document.querySelector("nav");
 taiChiPdfViewer.style.display = "none";
 dropdown.style.display = "none";
+
 
 console.log(footer.style.zIndex)
 
@@ -33,48 +35,47 @@ readMoreButton.onclick = function () { taiChiPdfViewer.style.display = "flex" }
 taiChiPdfViewer.onclick = function () { taiChiPdfViewer.style.display = "none" }
 
 //expand mark 
-expandMark.onclick = function () {expandMarkContainer.style.display = "flex"}
-expandMarkContainer.onclick = function () {expandMarkContainer.style.display = "none"}
+expandMark.onclick = function () { expandMarkContainer.style.display = "flex" }
+expandMarkContainer.onclick = function () { expandMarkContainer.style.display = "none" }
 
 //expand mirjam
-expandMirjam.onclick = function () {expandMirjamContainer.style.display = "flex"}
-expandMirjamContainer.onclick = function () {expandMirjamContainer.style.display = "none"}
+expandMirjam.onclick = function () { expandMirjamContainer.style.display = "flex" }
+expandMirjamContainer.onclick = function () { expandMirjamContainer.style.display = "none" }
 
 window.onscroll = function (e) {
-    const scrolled = ((window.scrollY / body.offsetHeight) * 100);
+    const scrolled = window.scrollY / section[0].offsetHeight;
     const addImg = "<img src=\"./Media/YingYang.png\"> <span class=\"current-section\">"
-    console.log(scrolled)
 
-    switch (Math.floor(scrolled)) {
-        case 0:
-            homeButton.innerHTML = "<span class=\"current-section\">&nbsp;"
-            contactButton.style.backgroundColor = "rgba(0, 0, 0, 0)"
-            contactButton.style.color = "#000"
-            break;
-        case 20:
-            homeButton.innerHTML = addImg + "Tai Chi<span>";
-            contactButton.style.backgroundColor = "var(--tai-chi-blue)"
-            contactButton.style.color = "#fff"
-            break;
-        case 40:
-            homeButton.innerHTML = addImg + "Docenten<span>";
-            contactButton.style.backgroundColor = "var(--tai-chi-blue)"
-            contactButton.style.color = "#fff"
-            break;
-        case 60:
-            homeButton.innerHTML = addImg + "Rooster<span>";
-            contactButton.style.backgroundColor = "var(--tai-chi-blue)"
-            contactButton.style.color = "#fff"
-            break;
-        case 79:
-            homeButton.innerHTML = addImg + "Contact<span>";
-            contactButton.style.backgroundColor = "rgba(0, 0, 0, 0)"
-            contactButton.style.color = "#000"
-            break;
-        case 80:
-            homeButton.innerHTML = addImg + "Contact<span>";
-            contactButton.style.backgroundColor = "rgba(0, 0, 0, 0)"
-            contactButton.style.color = "#000"
+    if (scrolled < 0.75) {
+        homeButton.innerHTML = "<span class=\"current-section\">&nbsp;"
+        contactButton.style.backgroundColor = "rgba(0, 0, 0, 0)"
+        contactButton.style.color = "#000"
+    }
+    if (scrolled > 0.75) {
+        homeButton.innerHTML = addImg + "Tai Chi<span>";
+        contactButton.style.backgroundColor = "var(--tai-chi-blue)"
+        contactButton.style.color = "#fff"
+    }
+    if (scrolled > 1.75) {
+        homeButton.innerHTML = addImg + "Docenten<span>";
+        contactButton.style.backgroundColor = "var(--tai-chi-blue)"
+        contactButton.style.color = "#fff"
+    }
+    if (scrolled > 2.75) {
+        homeButton.innerHTML = addImg + "Verdieping<span>";
+        contactButton.style.backgroundColor = "var(--tai-chi-blue)"
+        contactButton.style.color = "#fff"
+    }
+    if (scrolled > 3.75) {
+        homeButton.innerHTML = addImg + "Rooster<span>";
+        contactButton.style.backgroundColor = "var(--tai-chi-blue)"
+        contactButton.style.color = "#fff"
+    }
+    if (scrolled > 4.75) {
+
+        homeButton.innerHTML = addImg + "Contact<span>";
+        contactButton.style.backgroundColor = "rgba(0, 0, 0, 0)"
+        contactButton.style.color = "#000"
     }
 
 }
